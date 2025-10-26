@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOMME - Premium Menswear</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-white">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center border-b border-gray-200">
+      <div class="flex items-center space-x-8">
+        <button class="md:hidden" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+        <a href="home.html" class="text-2xl font-serif tracking-widest">HOMME</a>
+        <nav class="hidden md:flex space-x-6">
+          <a href="New_Arrivals.html" class="uppercase text-sm tracking-widest font-semibold text-black">New Arrivals</a>
+          <a href="Clothing.html" class="uppercase text-sm tracking-widest hover:text-gray-500">Clothing</a>
+          <a href="Shoes.html" class="uppercase text-sm tracking-widest hover:text-gray-500">Shoes</a>
+          <a href="Accessories.html" class="uppercase text-sm tracking-widest hover:text-gray-500">Accessories</a>
+        </nav>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button onclick="toggleSearch()">
+          <i class="fas fa-search text-lg"></i>
+        </button>
+        <a href="/account" class="hidden md:block">
+          <i class="fas fa-user text-lg"></i>
+        </a>
+        <button onclick="toggleCart()">
+          <i class="fas fa-shopping-bag text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-white z-50 pt-16 hidden md:hidden">
+    <div class="container mx-auto px-4 py-8">
+      <button class="absolute top-4 right-4" onclick="toggleMobileMenu()">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+      <nav class="flex flex-col space-y-6">
+        <a href="/new-arrivals" class="uppercase text-lg tracking-widest hover:text-gray-500">New Arrivals</a>
+        <a href="/clothing" class="uppercase text-lg tracking-widest hover:text-gray-500">Clothing</a>
+        <a href="/shoes" class="uppercase text-lg tracking-widest hover:text-gray-500">Shoes</a>
+        <a href="/accessories" class="uppercase text-lg tracking-widest hover:text-gray-500">Accessories</a>
+        <a href="/sale" class="uppercase text-lg tracking-widest text-red-500 hover:text-red-600">Sale</a>
+        <a href="/account" class="uppercase text-lg tracking-widest hover:text-gray-500">Account</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="pt-16">
+    <div class="container mx-auto px-4 py-12">
+      <!-- Page Header -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-serif mb-4">New Arrivals</h1>
+        <p class="text-gray-600 max-w-2xl mx-auto">Discover our latest collection of premium menswear. Fresh styles updated weekly.</p>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="group">
+          <div class="relative mb-4 bg-gray-100 aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Linen Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+              <button class="bg-white text-black px-4 py-2 uppercase text-xs tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">Quick View</button>
+            </div>
+          </div>
+          <div class="text-center">
+            <h3 class="text-sm font-medium mb-1">Premium Linen Suit</h3>
+            <p class="text-sm text-gray-500">$950.00</p>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="group">
+          <div class="relative mb-4 bg-gray-100 aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1578198576866-7e0ba6078128?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Leather Jacket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+              <button class="bg-white text-black px-4 py-2 uppercase text-xs tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">Quick View</button>
+            </div>
+          </div>
+          <div class="text-center">
+            <h3 class="text-sm font-medium mb-1">Biker Leather Jacket</h3>
+            <p class="text-sm text-gray-500">$795.00</p>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="group">
+          <div class="relative mb-4 bg-gray-100 aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1612766957962-b85888e6b83b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                 alt="Silk Shirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+              <button class="bg-white text-black px-4 py-2 uppercase text-xs tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">Quick View</button>
+            </div>
+          </div>
+          <div class="text-center">
+            <h3 class="text-sm font-medium mb-1">Silk Blend Shirt</h3>
+            <p class="text-sm text-gray-500">$325.00</p>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="group">
+            <div class="relative mb-4 bg-gray-100 aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                   alt="Linen Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                <button class="bg-white text-black px-4 py-2 uppercase text-xs tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">Quick View</button>
+              </div>
+            </div>
+            <div class="text-center">
+              <h3 class="text-sm font-medium mb-1">Premium Linen Suit</h3>
+              <p class="text-sm text-gray-500">$950.00</p>
+            </div>
+          </div>
+  
+          <!-- Product 5 -->
+          <div class="group">
+            <div class="relative mb-4 bg-gray-100 aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1578198576866-7e0ba6078128?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                   alt="Leather Jacket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                <button class="bg-white text-black px-4 py-2 uppercase text-xs tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">Quick View</button>
+              </div>
+            </div>
+            <div class="text-center">
+              <h3 class="text-sm font-medium mb-1">Biker Leather Jacket</h3>
+              <p class="text-sm text-gray-500">$795.00</p>
+            </div>
+          </div>
+  
+          <!-- Product 6 -->
+          <div class="group">
+            <div class="relative mb-4 bg-gray-100 aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1612766957962-b85888e6b83b?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                   alt="Silk Shirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                <button class="bg-white text-black px-4 py-2 uppercase text-xs tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">Quick View</button>
+              </div>
+            </div>
+            <div class="text-center">
+              <h3 class="text-sm font-medium mb-1">Silk Blend Shirt</h3>
+              <p class="text-sm text-gray-500">$325.00</p>
+            </div>
+          </div>
+
+        <!-- Add more products following the same pattern -->
+      </div>
+    </div>
+  </main>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-gray-200">
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-sm uppercase tracking-widest mb-4">Customer Service</h3>
+          <ul class="space-y-2">
+            <li><a href="/contact" class="text-sm text-gray-600 hover:text-black">Contact Us</a></li>
+            <li><a href="/shipping" class="text-sm text-gray-600 hover:text-black">Shipping & Returns</a></li>
+            <li><a href="/faq" class="text-sm text-gray-600 hover:text-black">FAQ</a></li>
+            <li><a href="/sizing" class="text-sm text-gray-600 hover:text-black">Size Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm uppercase tracking-widest mb-4">About</h3>
+          <ul class="space-y-2">
+            <li><a href="/about" class="text-sm text-gray-600 hover:text-black">Our Story</a></li>
+            <li><a href="/stores" class="text-sm text-gray-600 hover:text-black">Stores</a></li>
+            <li><a href="/careers" class="text-sm text-gray-600 hover:text-black">Careers</a></li>
+            <li><a href="/sustainability" class="text-sm text-gray-600 hover:text-black">Sustainability</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm uppercase tracking-widest mb-4">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="/terms" class="text-sm text-gray-600 hover:text-black">Terms & Conditions</a></li>
+            <li><a href="/privacy" class="text-sm text-gray-600 hover:text-black">Privacy Policy</a></li>
+            <li><a href="/cookies" class="text-sm text-gray-600 hover:text-black">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm uppercase tracking-widest mb-4">Connect</h3>
+          <div class="flex space-x-4 mb-4">
+            <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-instagram text-lg"></i></a>
+            <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-twitter text-lg"></i></a>
+            <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-facebook-f text-lg"></i></a>
+            <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-pinterest text-lg"></i></a>
+          </div>
+          <h3 class="text-sm uppercase tracking-widest mb-2">Payment Methods</h3>
+          <div class="flex space-x-2">
+            <i class="fab fa-cc-visa text-2xl text-gray-500"></i>
+            <i class="fab fa-cc-mastercard text-2xl text-gray-500"></i>
+            <i class="fab fa-cc-amex text-2xl text-gray-500"></i>
+            <i class="fab fa-cc-paypal text-2xl text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">© 2025 HOMME. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Search and Cart Toggles (placeholder)
+    function toggleSearch() {
+      // Implement search functionality
+    }
+
+    function toggleCart() {
+      // Implement cart functionality
+    }
+  </script>
+</body>
+</html>

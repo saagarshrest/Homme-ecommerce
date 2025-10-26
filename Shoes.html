@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOMME - Premium Menswear</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="min-h-screen bg-white">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full bg-white z-50 shadow-sm">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center border-b border-gray-200">
+      <div class="flex items-center space-x-8">
+        <button class="md:hidden" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+        <a href="home.html" class="text-2xl font-serif tracking-widest">HOMME</a>
+        <nav class="hidden md:flex space-x-6">
+          <a href="New_Arrivals.html" class="uppercase text-sm tracking-widest hover:text-gray-500">New Arrivals</a>
+          <a href="Clothing.html" class="uppercase text-sm tracking-widest hover:text-gray-500">Clothing</a>
+          <a href="Shoes.html" class="uppercase text-sm tracking-widest font-semibold text-black">Shoes</a>
+          <a href="Accessories.html" class="uppercase text-sm tracking-widest hover:text-gray-500">Accessories</a>
+        </nav>
+      </div>
+      <div class="flex items-center space-x-4">
+        <button onclick="toggleSearch()">
+          <i class="fas fa-search text-lg"></i>
+        </button>
+        <a href="/account" class="hidden md:block">
+          <i class="fas fa-user text-lg"></i>
+        </a>
+        <button onclick="toggleCart()">
+          <i class="fas fa-shopping-bag text-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-white z-50 pt-16 hidden">
+    <div class="container mx-auto px-4 py-8">
+      <button class="absolute top-4 right-4" onclick="toggleMobileMenu()">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+      <nav class="flex flex-col space-y-6">
+        <a href="/new-arrivals" class="uppercase text-lg tracking-widest hover:text-gray-500">New Arrivals</a>
+        <a href="/clothing" class="uppercase text-lg tracking-widest hover:text-gray-500">Clothing</a>
+        <a href="/shoes" class="uppercase text-lg tracking-widest font-semibold">Shoes</a>
+        <a href="/accessories" class="uppercase text-lg tracking-widest hover:text-gray-500">Accessories</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="pt-16">
+    <div class="container mx-auto px-4 py-12">
+      <!-- Category Filter -->
+      <div class="flex flex-wrap gap-4 mb-12 justify-center">
+        <button class="category-btn px-6 py-2 rounded-full bg-black text-white" onclick="showCategory('sneakers')">
+          Sneakers
+        </button>
+        <button class="category-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200" onclick="showCategory('boots')">
+          Boots
+        </button>
+        <button class="category-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200" onclick="showCategory('dress')">
+          Dress Shoes
+        </button>
+        <button class="category-btn px-6 py-2 rounded-full bg-gray-100 hover:bg-gray-200" onclick="showCategory('sandals')">
+          Sandals
+        </button>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Products will be dynamically inserted here -->
+      </div>
+    </div>
+  </main>
+
+<!-- Footer -->
+<footer class="bg-white border-t border-gray-200">
+    <div class="container mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-sm uppercase tracking-widest mb-4">Customer Service</h3>
+          <ul class="space-y-2">
+            <li><a href="/contact" class="text-sm text-gray-600 hover:text-black">Contact Us</a></li>
+            <li><a href="/shipping" class="text-sm text-gray-600 hover:text-black">Shipping & Returns</a></li>
+            <li><a href="/faq" class="text-sm text-gray-600 hover:text-black">FAQ</a></li>
+            <li><a href="/sizing" class="text-sm text-gray-600 hover:text-black">Size Guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm uppercase tracking-widest mb-4">About</h3>
+          <ul class="space-y-2">
+            <li><a href="/about" class="text-sm text-gray-600 hover:text-black">Our Story</a></li>
+            <li><a href="/stores" class="text-sm text-gray-600 hover:text-black">Stores</a></li>
+            <li><a href="/careers" class="text-sm text-gray-600 hover:text-black">Careers</a></li>
+            <li><a href="/sustainability" class="text-sm text-gray-600 hover:text-black">Sustainability</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm uppercase tracking-widest mb-4">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="/terms" class="text-sm text-gray-600 hover:text-black">Terms & Conditions</a></li>
+            <li><a href="/privacy" class="text-sm text-gray-600 hover:text-black">Privacy Policy</a></li>
+            <li><a href="/cookies" class="text-sm text-gray-600 hover:text-black">Cookie Policy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm uppercase tracking-widest mb-4">Connect</h3>
+          <div class="flex space-x-4 mb-4">
+            <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-instagram text-lg"></i></a>
+            <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-twitter text-lg"></i></a>
+            <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-facebook-f text-lg"></i></a>
+            <a href="#" class="text-gray-600 hover:text-black"><i class="fab fa-pinterest text-lg"></i></a>
+          </div>
+          <h3 class="text-sm uppercase tracking-widest mb-2">Payment Methods</h3>
+          <div class="flex space-x-2">
+            <i class="fab fa-cc-visa text-2xl text-gray-500"></i>
+            <i class="fab fa-cc-mastercard text-2xl text-gray-500"></i>
+            <i class="fab fa-cc-amex text-2xl text-gray-500"></i>
+            <i class="fab fa-cc-paypal text-2xl text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+        <p class="text-sm text-gray-500">© 2025 HOMME. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Shoe product data
+    const shoes = {
+      sneakers: [
+        {
+          id: 1,
+          name: "Premium Leather Sneakers",
+          price: "$295.00",
+          image: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80"
+        },
+        {
+          id: 2,
+          name: "Classic White Sneakers",
+          price: "$195.00",
+          image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80"
+        },
+        {
+          id: 3,
+          name: "High-Top Canvas Sneakers",
+          price: "$175.00",
+          image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80"
+        }
+      ],
+      boots: [
+        {
+          id: 4,
+          name: "Chelsea Leather Boots",
+          price: "$395.00",
+          image: "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80"
+        },
+        {
+          id: 5,
+          name: "Hiking Boots",
+          price: "$275.00",
+          image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
+        },
+        {
+          id: 6,
+          name: "Chukka Boots",
+          price: "$325.00",
+          image: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+        }
+      ],
+      dress: [
+        {
+          id: 7,
+          name: "Oxford Dress Shoes",
+          price: "$345.00",
+          image: "https://images.unsplash.com/photo-1560769629-9d5a14f2dd76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80"
+        },
+        {
+          id: 8,
+          name: "Monk Strap Shoes",
+          price: "$375.00",
+          image: "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+        },
+        {
+          id: 9,
+          name: "Tassel Loafers",
+          price: "$295.00",
+          image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80"
+        }
+      ],
+      sandals: [
+        {
+          id: 10,
+          name: "Leather Slides",
+          price: "$125.00",
+          image: "https://images.unsplash.com/photo-1604671801198-8a6a008a6b80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+        },
+        {
+          id: 11,
+          name: "Sport Sandals",
+          price: "$95.00",
+          image: "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1065&q=80"
+        },
+        {
+          id: 12,
+          name: "Premium Leather Sandals",
+          price: "$165.00",
+          image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80"
+        }
+      ]
+    };
+
+    // Display shoes for a category
+    function showCategory(category) {
+      // Update active button
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('bg-black', 'text-white');
+        btn.classList.add('bg-gray-100', 'hover:bg-gray-200');
+      });
+      event.target.classList.add('bg-black', 'text-white');
+      event.target.classList.remove('bg-gray-100', 'hover:bg-gray-200');
+
+      // Clear current products
+      const productGrid = document.getElementById('productGrid');
+      productGrid.innerHTML = '';
+
+      // Add new products
+      shoes[category].forEach(shoe => {
+        productGrid.innerHTML += `
+          <div class="product-card group">
+            <div class="relative mb-4 bg-gray-100 aspect-[3/4] overflow-hidden">
+              <img src="${shoe.image}" 
+                   alt="${shoe.name}" 
+                   class="w-full h-full object-cover transition-transform duration-300">
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center">
+                <button class="bg-white text-black px-4 py-2 uppercase text-xs tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Quick View
+                </button>
+              </div>
+            </div>
+            <div class="text-center">
+              <h3 class="text-sm font-medium mb-1">${shoe.name}</h3>
+              <p class="text-sm text-gray-500">${shoe.price}</p>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Initialize with sneakers category
+    document.addEventListener('DOMContentLoaded', () => {
+      showCategory('sneakers');
+    });
+  </script>
+</body>
+</html>
